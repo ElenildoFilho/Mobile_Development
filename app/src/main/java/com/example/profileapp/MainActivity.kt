@@ -46,4 +46,5 @@ class MainActivity : AppCompatActivity() {
             experienceLayout.addView(textView)
 
         }
+    }
 }
