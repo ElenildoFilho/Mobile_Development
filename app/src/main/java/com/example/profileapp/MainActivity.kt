@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -21,11 +22,18 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val profileImage = findViewById<ImageView>(R.id.profilePhoto)
+
+
+        val profilePhoto = findViewById<ImageView>(R.id.profilePhoto)
         val nameText = findViewById<TextView>(R.id.Name)
         val descriptionText = findViewById<TextView>(R.id.Description)
         val currentJobText = findViewById<TextView>(R.id.currentJob)
         val experienceLayout = findViewById<LinearLayout>(R.id.experienceLayout)
+
+        profilePhoto.setOnClickListener {
+            Toast.makeText(this, "Foto de perfil de Ana Silva", Toast.LENGTH_SHORT).show()
+        }
+
 
         nameText.text = "Ana Silva"
         descriptionText.text = "Desenvolvedora de software com 5 anos de experiência."
